@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use App\Quiz;
+use App\Question;
 
 class QuizTest extends TestCase
 {
