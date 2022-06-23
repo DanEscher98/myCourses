@@ -15,7 +15,8 @@ class QuizTest extends TestCase
 		$this->assertCount(1, $quiz->questions());
 	}
 
-	public function test_it_can_be_grabed() {
+	/** @test */
+	public function it_grades_perfect() {
 		$quiz = new Quiz();
 		$quiz->addQuestion(new Question("2 * 2", 4));
 		$question = $quiz->nextQuestion();
