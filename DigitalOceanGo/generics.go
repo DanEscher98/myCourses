@@ -83,7 +83,7 @@ func NewTradingCardDeck() *Deck[*TradingCard] {
 	return deck
 }
 
-func main() {
+func main_a() {
 	playingDeck := NewPlayingCardDeck()
 	fmt.Printf("--- drawing playing card ---\n")
 	playingCard := playingDeck.RandomCard()
