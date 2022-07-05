@@ -26,7 +26,7 @@ func divideByZero() {
 	fmt.Println(divide(1, 0))
 }
 
-func main() {
+func main_e() {
 	s := &Shark{"Sammy"}
 	// s = nil
 	s.SayHello()
