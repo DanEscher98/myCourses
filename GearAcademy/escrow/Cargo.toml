@@ -1,0 +1,48 @@
+[package]
+name = "escrow"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+escrow-io.workspace = true
+gstd = { workspace = true, features = ["debug"] }
+parity-scale-codec.workspace = true
+scale-info.workspace = true
+gmeta.workspace = true
+hashbrown.workspace = true
+
+[build-dependencies]
+gear-wasm-builder.workspace = true
+gmeta.workspace = true
+escrow-io.workspace = true
+escrow-state.workspace = true
+
+[dev-dependencies]
+escrow-state.workspace = true
+gstd = { workspace = true, features = ["debug"] }
+gtest.workspace = true
+gclient.workspace = true
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+escrow-io = { path = "io" }
+escrow-state = { path = "state" }
+gstd = { git = "https://github.com/gear-tech/gear.git", tag = "v1.0.2" }
+gclient = { git = "https://github.com/gear-tech/gear.git", tag = "v1.0.2" }
+gmeta = { git = "https://github.com/gear-tech/gear.git", tag = "v1.0.2" }
+gtest = { git = "https://github.com/gear-tech/gear.git", tag = "v1.0.2" }
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", tag = "v1.0.2" }
+parity-scale-codec = { version = "3.6.9", default-features = false }
+scale-info = { version = "2.10.0", default-features = false }
+hashbrown = "0.14.3"
+
+[features]
+binary-vendor = []
+#wasm-opt = ["gear-wasm-builder/wasm-opt"]
+#default = ["binary-vendor", "wasm-opt"]
+
+[workspace]
+members = ["state"]
